@@ -21,11 +21,8 @@
    `streamlit run main.py`
 
 ## 📷 运行截图
-
-<p align="center">
-  <img src="assets/screenshot-home.png" width="48%" />
-  <img src="assets/screenshot-rag.png" width="48%" />
-</p>
+![首页截图](assets/screenshot-home.png)
+![RAG回答截图](assets/screenshot-rag.png)
 
 ## 📝 个人备注
 - 开发过程中遇到的最大坑是 Qwen 的 Embedding 接口不支持 token 列表，后来加上 `check_embedding_ctx_length=False` 才解决。
