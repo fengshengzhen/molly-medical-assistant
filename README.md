@@ -9,17 +9,17 @@
 - **流式输出**：基于 FastAPI/Streamlit 实现流式输出，等待时有“正在检索医学知识库”的交互反馈。
 
 ## 🚀 运行步骤
-1. 克隆代码：
+## 💻 本地怎么跑起来？
+
+1. 克隆代码到本地：
    `git clone https://github.com/fengshengzhen/molly-medical-assistant.git`
-2. 安装依赖（建议使用 Python 3.11 虚拟环境）：
+2. 安装依赖（强烈建议用 Python 3.11，新版本容易出兼容坑）：
    `pip install -r requirements.txt`
 3. 配置 API Key：
-   - 在根目录新建 `.env` 文件。
-   - 填入你的 Key：`QWEN_API_KEY=你的通义千问Key`
-   - （可选）填入 `OPENAI_API_KEY=你的DeepSeek Key`
+   - 在根目录建一个 `.env` 文件。
+   - 把 `QWEN_API_KEY=你的通义千问Key` 填进去（用 DeepSeek 就填 `OPENAI_API_KEY`）。
 4. 启动项目：
    `streamlit run main.py`
-
 ## 📷 运行截图
 <p align="center">
   <img src="https://github.com/user-attachments/assets/faac2d1d-89b0-4f4b-beef-15bc9ea0b799" width="48%" />
@@ -27,5 +27,6 @@
 </p>
 
 ## 📝 个人备注
-- 开发过程中遇到的最大坑是 Qwen 的 Embedding 接口不支持 token 列表，后来加上 `check_embedding_ctx_length=False` 才解决。
-- 本项目是我的个人练习与简历展示作品，欢迎交流指正。
+## 📝 开发记录
+- 踩了个坑：Qwen 的 Embedding 接口不支持 token 列表，频繁报 400 错误。后来加上 `check_embedding_ctx_length=False` 强制传纯文本才搞定。
+- 目前已实现基于 RAG 的精准医疗检索，能准确区分缺血/出血性脑卒中的禁忌症，后续有空还会继续迭代。
