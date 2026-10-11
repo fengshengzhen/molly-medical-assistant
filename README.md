@@ -23,8 +23,8 @@
 ## 📷 运行截图
 
 <p align="center">
-  <img src="第一张图的链接或路径" width="48%" />
-  <img src="第二张图的链接或路径" width="48%" />
+  <img src="assets/screenshot-home.png" width="48%" />
+  <img src="assets/screenshot-rag.png" width="48%" />
 </p>
 
 ## 📝 个人备注
