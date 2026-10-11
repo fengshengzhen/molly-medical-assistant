@@ -1,0 +1,8 @@
+.env
+wkb/rag
+wkb/chat_history.db
+__pycache__/
+build/
+dist/
+logs/
+.idea/
